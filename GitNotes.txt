@@ -28,3 +28,21 @@ git push origin main
 
 git branch -d dev
 git push origin --delete dev
+
+
+----------CARGAR VERSIONES-----------
+1)crear tag (version local)
+git tag v1.0
+git tag -a v1.0 -m "Primera version"
+
+2)Enviar (PUSHEAR) el tag a git
+git push origin v1.0
+
+3)Ver todos los Tag
+git tag
+
+4)Volver al estado anterior o al tag
+git checkout v1.0
+git checkout -b nueva-rama-v1
+
+4)

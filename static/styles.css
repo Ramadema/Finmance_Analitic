@@ -14,8 +14,20 @@ body {
 }
 
 h1 {
+    color: #eaeaea;
     text-align: center;
-    padding: 20px;
+    background-color: #333333; /* Fondo de color */
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-shadow: 4px 4px 7px #ffffff64; /* Sombra de texto */
+    margin-bottom: -20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;
+    padding: 10px;
 }
 
 /* Estilos de los gráficos */
@@ -34,13 +46,42 @@ h1 {
 /* Estilos de las cotizaciones del dólar */
 .dollar-container {
     padding-top: 20px;
+    text-align: center; /* Centrar todo el contenido dentro del contenedor */
 }
 
-.dollar-box {
-    padding: 15px;
-    margin: 5px;
+.dollar-container h3 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Estilo para las cajas de cada tipo de cotización */
+.compra-dollar-box,
+.venta-dollar-box,
+.compra-euro-box,
+.venta-euro-box {
+    padding: 10px;
+    margin: 10px auto;
     border-radius: 5px;
     color: white;
+    font-size: 20px;
+    width: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+    max-width: 1000px; /* Limita el tamaño máximo */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo personalizado para cada tipo de cotización */
+.compra-dollar-box {
     background-color: #4CAF50;
-    font-size: 16px;
+}
+
+.venta-dollar-box {
+    background-color: #23d472;
+}
+
+.compra-euro-box {
+    background-color: #0e7be4;
+}
+
+.venta-euro-box {
+    background-color: #48a4fd;
 }

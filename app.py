@@ -73,7 +73,7 @@ def home():
 
 # Función para ejecutar Dash
 def run_dash():
-    app.run(debug=True, use_reloader=False)  # Ejecuta Dash sin el reloader
+    app.run(debug=True, host="0.0.0.0", port=8080, use_reloader=False)  # Ejecuta Dash sin el reloader
 
 # Crear la ventana principal de Tkinter
 root = tk.Tk()
@@ -81,7 +81,7 @@ root.title("Mi Panel Financiero")
 root.geometry("1000x800")  # Tamaño de la ventana
 
 # Iniciar Dash en segundo plano (abrir en navegador)
-webbrowser.open('http://127.0.0.1:5000/')  # Abre automáticamente el navegador
+webbrowser.open('http://127.0.0.1:8080/')  # Abre automáticamente el navegador
 
 # Iniciar el servidor Dash en el hilo principal
 run_dash()

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Datos Financieros</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Panel de Datos Financieros</h1>
+        
+        <!-- Gráficos de acciones -->
+        <div class="graphs-container">
+            {% for stock, figure in figures.items() %}
+                <div class="graph">
+                    <h3>Precio de la acción {{ stock }}</h3>
+                    <img src="{{ url_for('static', filename='images/' + stock + '.png') }}" alt="Gráfico {{ stock }}" style="max-width: 100%; height: auto;">
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Cotización del Dólar -->
+        <div class="dollar-container">
+            <h3>Cotización del Dólar en Argentina</h3>
+            {% for key, value in exchange_rate.items() %}
+                <div class="dollar-box">
+                    {{ key }}: {{ value }} ARS
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

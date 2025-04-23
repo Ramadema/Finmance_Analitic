@@ -34,10 +34,10 @@ def get_exchange_rate():
             "Venta Dólar Blue": data['blue']['value_sell'] if 'blue' in data else 'N/A',
             "Compra Dólar Oficial": data['oficial']['value_buy'] if 'oficial' in data else 'N/A',
             "Venta Dólar Oficial": data['oficial']['value_sell'] if 'oficial' in data else 'N/A',
-            "Compra Euro Blue": data['oficial']['value_buy'] if 'blue_euro' in data else 'N/A',
-            "Venta Euro Blue": data['oficial']['value_sell'] if 'blue_euro' in data else 'N/A',
-            "Compra Euro Oficial": data['oficial']['value_buy'] if 'oficial_euro' in data else 'N/A',
-            "Venta Euro Oficial": data['oficial']['value_sell'] if 'oficial_euro' in data else 'N/A',
+            "Compra Euro Blue": data['blue_euro']['value_buy'] if 'blue_euro' in data else 'N/A',
+            "Venta Euro Blue": data['blue_euro']['value_sell'] if 'blue_euro' in data else 'N/A',
+            "Compra Euro Oficial": data['oficial_euro']['value_buy'] if 'oficial_euro' in data else 'N/A',
+            "Venta Euro Oficial": data['oficial_euro']['value_sell'] if 'oficial_euro' in data else 'N/A',
         }
     else:
         print(f"Error al obtener los tipos de cambio: {response.status_code}")

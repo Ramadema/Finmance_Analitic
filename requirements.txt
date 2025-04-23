@@ -1,4 +1,4 @@
-requests
-dash
-plotly
+Flask
 yfinance
+requests
+plotly

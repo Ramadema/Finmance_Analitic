@@ -13,47 +13,45 @@
         <!-- Cotización del Dólar -->
         <div class="dollar-container">
             <h2>Cotización del Dólar en Argentina</h2>
-            
-            <div class="compra-dollar-box">
-                Compra Dólar Blue: {{ exchange_rate.get('Compra Dólar Blue', 'N/A') }} ARS
-            </div>
-            <div class="venta-dollar-box">
-                Venta Dólar Blue: {{ exchange_rate.get('Venta Dólar Blue', 'N/A') }} ARS
-            </div>
-            <div class="compra-dollar-box">
-                Compra Dólar Oficial: {{ exchange_rate.get('Compra Dólar Oficial', 'N/A') }} ARS
-            </div>
-            <div class="venta-dollar-box">
-                Venta Dólar Oficial: {{ exchange_rate.get('Venta Dólar Oficial', 'N/A') }} ARS
-            </div>
-            
-            <div class="dollar-container"></div>
 
-            <div class="compra-euro-box">
-                Compra Euro Blue: {{ exchange_rate.get('Compra Euro Blue', 'N/A') }} ARS
-            </div>
-            <div class="venta-euro-box">
-                Venta Euro Blue: {{ exchange_rate.get('Venta Euro Blue', 'N/A') }} ARS
-            </div>
-            <div class="compra-euro-box">
-                Compra Euro Oficial: {{ exchange_rate.get('Compra Euro Oficial', 'N/A') }} ARS
-            </div>
-            <div class="venta-euro-box">
-                Venta Euro Oficial: {{ exchange_rate.get('Venta Euro Oficial', 'N/A') }} ARS
+            <!-- NUEVA GRILLA DE 4 COLUMNAS -->
+            <div class="cards-grid">
+                <div class="card-box blue-dollar-box">
+                    Compra Dólar Blue: {{ exchange_rate.get('Compra Dólar Blue', 'N/A') }} ARS
+                </div>
+                <div class="card-box blue-dollar-box">
+                    Venta Dólar Blue: {{ exchange_rate.get('Venta Dólar Blue', 'N/A') }} ARS
+                </div>
+                <div class="card-box oficial-dollar-box">
+                    Compra Dólar Oficial: {{ exchange_rate.get('Compra Dólar Oficial', 'N/A') }} ARS
+                </div>
+                <div class="card-box oficial-dollar-box">
+                    Venta Dólar Oficial: {{ exchange_rate.get('Venta Dólar Oficial', 'N/A') }} ARS
+                </div>
+                <div class="card-box blue-euro-box">
+                    Compra Euro Blue: {{ exchange_rate.get('Compra Euro Blue', 'N/A') }} ARS
+                </div>
+                <div class="card-box blue-euro-box">
+                    Venta Euro Blue: {{ exchange_rate.get('Venta Euro Blue', 'N/A') }} ARS
+                </div>
+                <div class="card-box oficial-euro-box">
+                    Compra Euro Oficial: {{ exchange_rate.get('Compra Euro Oficial', 'N/A') }} ARS
+                </div>
+                <div class="card-box oficial-euro-box">
+                    Venta Euro Oficial: {{ exchange_rate.get('Venta Euro Oficial', 'N/A') }} ARS
+                </div>
             </div>
         </div>
 
-        <div class="dollar-container"></div>
         <!-- Gráficos de acciones -->
-        <h2>Acciones mas importantes para rama</h2>
-        <div class="graphs-container">
+        <div class="stocks-grid">
             {% for stock, figure in figures.items() %}
-                <div class="graph">
+                <div class="stock-card">
                     <h3>Precio de la acción {{ stock }}</h3>
-                    <img src="{{ url_for('static', filename='images/' + stock + '.png') }}" alt="Gráfico {{ stock }}" style="max-width: 100%; height: auto;">
+                    <img src="{{ url_for('static', filename='images/' + stock + '.png') }}" alt="Gráfico {{ stock }}">
                 </div>
             {% endfor %}
-        </div>
+        </div>        
     </div>
 </body>
 </html>
